@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+    通信をしよう！
+</head>
+<h1>
+<!-- 入力エリア -->
+<textarea id="myInput" placeholder="ここに文字を入力..."></textarea>
+
+<!-- リアルタイム反映先 -->
+<div id="preview"></div>
+
+<script>
+  const textInput = document.getElementById('myInput');
+  const preview = document.getElementById('preview');
+
+  // 入力されるたびに実行されるイベントを設定
+  textInput.addEventListener('input', (e) => {
+    // textContent を使うことで安全にテキストを反映
+    preview.textContent = e.target.value;
+  });
+</script>
+
+</h1>
